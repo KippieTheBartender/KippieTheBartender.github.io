@@ -1,3 +1,9 @@
+div{
+  margin:auto;
+  font-size: 15px;
+  font-family: lato;
+}
+
 .container {  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
