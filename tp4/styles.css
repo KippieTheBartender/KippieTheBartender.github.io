@@ -7,8 +7,6 @@ div {
   margin:auto;
   width:10vw;
   height:10vw;
-  min-width:220px;
-  min-height:220px;
   display: flex;
   align-items: center;
   
