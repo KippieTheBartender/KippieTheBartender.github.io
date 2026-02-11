@@ -13,9 +13,9 @@ div {
   align-items: center;
 
   /*Purely aesthetic, controls the borders around the individual grid boxes*/
-  border: solid 0.2vw black;
-  box-shadow: inset 0 0 0.4vw black;
-  border-radius: 0.5vw;
+  border: solid 0.3vw black;
+  box-shadow: inset 0 0 0.2vw black;
+  border-radius: 0.2vw;
   
   font-size: 5vw;
 }
