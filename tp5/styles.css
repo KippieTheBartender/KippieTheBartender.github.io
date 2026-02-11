@@ -1,3 +1,9 @@
+/*Switched to using a root for better variable control. I'd forgotten i could do this with tp4*/
+:root {
+  --regionSize: 10vw;
+  --cardSize: 11vw;
+}
+
 div {
   /*Used div controls here to bulk handle centering and vertical spacing*/
   margin-top:15vh;
@@ -7,15 +13,14 @@ div {
 .container div{
   /*margin:auto fixes spacing issues, width/height are 1 less than region sizes to allow for a nice border look*/
   margin:auto;
-  width:10vw;
-  height:10vw;
+  width: var(--regionSize);
+  height: var(--regionSize);
 
   display: flex;
   align-items: center;
 
   /*Purely aesthetic, controls the borders around the individual grid boxes*/
   border: solid 0.3vw black;
-  box-shadow: inset 0 0 0.2vw black;
   border-radius: 0.2vw;
   
   font-size: 5vw;
@@ -23,8 +28,8 @@ div {
 
 .container {  display: grid;
   /*Values should be at least 1 higher than .container div {width/height} for appearances*/
-  grid-template-columns: 11vw 11vw 11vw;
-  grid-template-rows: 11vw 11vw 11vw;
+  grid-template-columns: var(--cardSize) var(--cardSize) var(--cardSize);
+  grid-template-rows: var(--cardSize) var(--cardSize) var(--cardSize);
   gap: 4px 4px;
   
   grid-auto-flow: row;
@@ -53,35 +58,13 @@ div {
   backface-visibility: hidden; /* special CSS property relevant to 3D flips */
 }
 
-/*I made these in case I needed them, but theyre unnecessary atm. If i reuse this code they'll be of use.*/
-.a1 { grid-area: a1;  }
+.cardTop {
+  background-color: darkblue;
+  color: #eee;
+}
 
-.a2 { grid-area: a2; }
-
-.a3 { grid-area: a3; }
-
-.a4 { grid-area: a4; }
-
-.b1 { grid-area: b1; }
-
-.b2 { grid-area: b2; }
-
-.b3 { grid-area: b3; }
-
-.b4 { grid-area: b4; }
-
-.c1 { grid-area: c1; }
-
-.c2 { grid-area: c2; }
-
-.c3 { grid-area: c3; }
-
-.c4 { grid-area: c4; }
-
-.d1 { grid-area: d1; }
-
-.d2 { grid-area: d2; }
-
-.d3 { grid-area: d3; }
-
-.d4 { grid-area: d4; }
+.cardBottom {
+  background-color: #eee;
+  color: darkblue;
+  transform: rotateY(180deg); /* pre-flip so it appears on parent's flip */
+}
