@@ -43,7 +43,7 @@ div {
   transform-style: preserve-3d;
 }
 
-.container:hover .a1 {
+.card:hover {
   transform: rotateY(180deg); /* simulate a 3D flip */
 }
 
