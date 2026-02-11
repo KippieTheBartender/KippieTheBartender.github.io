@@ -33,6 +33,24 @@ div {
     "b1 b2 b3 b4"
     "c1 c2 c3 c4"
     "d1 d2 d3 d4";
+
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.container:hover .a1 {
+  transform: rotateY(180deg); /* simulate a 3D flip */
+}
+
+.cardTop,
+.cardBottom {
+  position: absolute; /* positioning within the parent cardContent object */
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  border: 2px solid darkblue;
+  font-size: 42px;
+  backface-visibility: hidden; /* special CSS property relevant to 3D flips */
 }
 
 /*I made these in case I needed them, but theyre unnecessary atm. If i reuse this code they'll be of use.*/
