@@ -9,8 +9,8 @@ div{
 }
 
 .container {  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 20vw 20vw 20vw;
+  grid-template-rows: 20vw 20vw 20vw;
   gap: 4px 4px;
   grid-auto-flow: row;
   grid-template-areas:
