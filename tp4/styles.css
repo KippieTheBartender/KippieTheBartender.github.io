@@ -1,6 +1,10 @@
 div{
   margin:auto;
-  font-size: 15px;
+  /*using vw for both to accomodate phones having high vertical/width ratio*/
+  min-height: 20vw;
+  min-width: 20vw;
+
+  font-size: 15vw;
   font-family: lato;
 }
 
