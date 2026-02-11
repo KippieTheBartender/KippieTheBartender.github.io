@@ -42,14 +42,28 @@ div {
 
 .a3 { grid-area: a3; }
 
+.a4 { grid-area: a4; }
+
 .b1 { grid-area: b1; }
 
 .b2 { grid-area: b2; }
 
 .b3 { grid-area: b3; }
 
+.b4 { grid-area: b4; }
+
 .c1 { grid-area: c1; }
 
 .c2 { grid-area: c2; }
 
 .c3 { grid-area: c3; }
+
+.c4 { grid-area: c4; }
+
+.d1 { grid-area: d1; }
+
+.d2 { grid-area: d2; }
+
+.d3 { grid-area: d3; }
+
+.d4 { grid-area: d4; }
