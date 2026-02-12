@@ -1,7 +1,7 @@
+/*the code I made for tp4 was used as a base here. I figured there was no need to reinvent the wheel.*/
 /*Switched to using a root for better variable control. I'd forgotten i could do this with tp4*/
 :root {
   --regionSize: 15vw;
-  --cardSize: 16vw;
 }
 
 div {
@@ -24,8 +24,8 @@ div {
 
 .container {  display: grid;
   /*Values should be at least 1 higher than .container div {width/height} for appearances*/
-  grid-template-columns: var(--cardSize) var(--cardSize) var(--cardSize);
-  grid-template-rows: var(--cardSize) var(--cardSize) var(--cardSize);
+  grid-template-columns: 100% 100% 100%;
+  grid-template-rows: 100% 100% 100%;
   gap: 4px 4px;
   
   grid-auto-flow: row;
@@ -35,26 +35,28 @@ div {
     "c1 c2 c3 c4"
     "d1 d2 d3 d4";
 }
-
+/*Ended up making the individual tiles from tp4 into card classes for this assignment.*/
 .card{
   position: relative;
-  width: 110%;
-  height: 110%;
-  perspective: 500px; /* special CSS property relevant to 3D flips */
+  width: 100%;
+  height: 100%;
+  perspective: 500px;
   
   font-size: 5vw;
 }
 
+/*wrapper for the card contents*/
 .cardWrapper{
-  position: absolute; /* positioning within the parent card object */
+  position: absolute; 
   width: 100%;
   height: 100%;
-  transition: transform 0.5s;
-  transform-style: preserve-3d; /* special CSS property relevant to 3D flips */
+  transition: transform 0.8s;
+  transform-style: preserve-3d; 
 }
 
+ /*simulate the flip*/
 .card:hover .cardWrapper{
-  transform: rotateY(180deg); /* simulate a 3D flip */
+  transform: rotateY(180deg);
 }
 
 .cardTop,
