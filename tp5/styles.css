@@ -1,12 +1,12 @@
 /*the code I made for tp4 was used as a base here. I figured there was no need to reinvent the wheel.*/
 /*Switched to using a root for better variable control. I'd forgotten i could do this with tp4*/
 :root {
-  --regionSize: 5vw;
+  --regionSize: 10vw;
 }
 
 div {
   /*Used div controls here to bulk handle centering and vertical spacing*/
-  margin-top:10vh;
+  margin-top:5vh;
   justify-content:center;
 }
 
