@@ -38,8 +38,8 @@ div {
 
 .card{
   position: relative;
-  width: var(--cardSize);
-  height: var(--cardSize);
+  width: 110%;
+  height: 110%;
   perspective: 500px; /* special CSS property relevant to 3D flips */
   
   font-size: 5vw;
@@ -54,7 +54,7 @@ div {
 }
 
 .card:hover .cardWrapper{
-  transform: rotateZ(180deg); /* simulate a 3D flip */
+  transform: rotateY(180deg); /* simulate a 3D flip */
 }
 
 .cardTop,
@@ -77,4 +77,9 @@ div {
   background-color: #eee;
   color: darkblue;
   transform: rotateY(180deg); /* pre-flip so it appears on parent's flip */
+}
+
+.p1 {
+  background-image: url("images/cardbg.png");
+  background-size:contain;
 }
