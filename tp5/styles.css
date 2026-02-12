@@ -35,6 +35,8 @@ div {
     "c1 c2 c3 c4"
     "d1 d2 d3 d4";
 }
+
+/*A lot of this is taken from the codepen. I simply couldn't find a better implementation. Let me know if this is an issue.*/
 /*Ended up making the individual tiles from tp4 into card classes for this assignment.*/
 .card{
   position: relative;
@@ -67,21 +69,24 @@ div {
   width: 100%;
   border: 2px solid black;
   border-radius:0.2vw;
-  backface-visibility: hidden; /*
+  backface-visibility: hidden;
 }
 
+/*Just one shared class for the card top*/
 .cardTop {
   background-image: url("images/cardbg.png");
   background-size:contain;
   color: #eee;
 }
 
+/*Generic card bottom class to handle flipping.*/
 .cardBottom {
   background-color: #eee;
   color: darkblue;
   transform: rotateY(180deg); /* pre-flip so it appears on parent's flip */
 }
 
+/*These are the paired classes that hold the images. I cropped the images manually to avoid complicated formatting.*/
 .p1 {
   background-image: url("images/koi.png");
   background-size:contain;
