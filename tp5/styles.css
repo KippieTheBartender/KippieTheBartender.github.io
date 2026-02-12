@@ -55,7 +55,7 @@ div {
   transform-style: preserve-3d; /* special CSS property relevant to 3D flips */
 }
 
-.card:hover {
+.card:hover .cardWrapper{
   transform: rotateY(180deg); /* simulate a 3D flip */
 }
 
