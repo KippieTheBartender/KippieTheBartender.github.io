@@ -1,7 +1,7 @@
 /*the code I made for tp4 was used as a base here. I figured there was no need to reinvent the wheel.*/
 /*Switched to using a root for better variable control. I'd forgotten i could do this with tp4*/
 :root {
-  --regionSize: 10vw;
+  --regionSize: 5vw;
 }
 
 div {
@@ -24,8 +24,8 @@ div {
 
 .container {  display: grid;
   /*Values should be at least 1 higher than .container div {width/height} for appearances*/
-  grid-template-columns: var(--regionSize) var(--regionSize) var(--regionSize);
-  grid-template-rows: var(--regionSize) var(--regionSize) var(--regionSize);
+  grid-template-columns: var(--regionSize) var(--regionSize) var(--regionSize) var(--regionSize);
+  grid-template-rows: var(--regionSize) var(--regionSize) var(--regionSize) var(--regionSize);
   gap: 1vw 1vw;
   
   grid-auto-flow: row;
