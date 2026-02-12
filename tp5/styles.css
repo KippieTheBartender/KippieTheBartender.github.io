@@ -1,12 +1,12 @@
 /*Switched to using a root for better variable control. I'd forgotten i could do this with tp4*/
 :root {
-  --regionSize: 10vw;
-  --cardSize: 11vw;
+  --regionSize: 15vw;
+  --cardSize: 16vw;
 }
 
 div {
   /*Used div controls here to bulk handle centering and vertical spacing*/
-  margin-top:15vh;
+  margin-top:10vh;
   justify-content:center;
 }
 
@@ -15,6 +15,8 @@ div {
   margin:auto;
   width: var(--regionSize);
   height: var(--regionSize);
+  max-width: 20vh;
+  max-height:20vh;
 
   display: flex;
   align-items: center;
@@ -52,7 +54,7 @@ div {
 }
 
 .card:hover .cardWrapper{
-  transform: rotateY(180deg); /* simulate a 3D flip */
+  transform: rotateZ(180deg); /* simulate a 3D flip */
 }
 
 .cardTop,
