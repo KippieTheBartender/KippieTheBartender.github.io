@@ -39,10 +39,6 @@ div {
   width: var(--cardSize);
   height: var(--cardSize);
   perspective: 500px; /* special CSS property relevant to 3D flips */
-
-  /*Purely aesthetic, controls the borders around the individual grid boxes*/
-  border: solid 0.3vw black;
-  border-radius: 0.2vw;
   
   font-size: 5vw;
 }
