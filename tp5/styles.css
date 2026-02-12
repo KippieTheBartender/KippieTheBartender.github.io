@@ -6,6 +6,7 @@
 
 div {
   /*Used div controls here to bulk handle centering and vertical spacing*/
+  margin:auto;
   margin-top:5vh;
   justify-content:center;
 }
