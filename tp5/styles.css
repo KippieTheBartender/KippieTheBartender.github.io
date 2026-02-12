@@ -32,12 +32,6 @@ div {
     "b1 b2 b3 b4"
     "c1 c2 c3 c4"
     "d1 d2 d3 d4";
-
-     /*Purely aesthetic, controls the borders around the individual grid boxes*/
-  border: solid 0.3vw black;
-  border-radius: 0.2vw;
-  
-  font-size: 5vw;
 }
 
 .card{
@@ -45,6 +39,12 @@ div {
   width: var(--cardSize);
   height: var(--cardSize);
   perspective: 500px; /* special CSS property relevant to 3D flips */
+
+  /*Purely aesthetic, controls the borders around the individual grid boxes*/
+  border: solid 0.3vw black;
+  border-radius: 0.2vw;
+  
+  font-size: 5vw;
 }
 
 .cardWrapper{
@@ -66,7 +66,6 @@ div {
   height: 100%;
   width: 100%;
   border: 2px solid darkblue;
-  font-size: 42px;
   backface-visibility: hidden; /* special CSS property relevant to 3D flips */
 }
 
