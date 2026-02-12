@@ -61,12 +61,13 @@ div {
 
 .cardTop,
 .cardBottom {
-  position: absolute; /* positioning within the parent cardContent object */
+  position: absolute;
   text-align: center;
   height: 100%;
   width: 100%;
-  border: 2px solid darkblue;
-  backface-visibility: hidden; /* special CSS property relevant to 3D flips */
+  border: 2px solid black;
+  border-radius:0.2vw;
+  backface-visibility: hidden; /*
 }
 
 .cardTop {
