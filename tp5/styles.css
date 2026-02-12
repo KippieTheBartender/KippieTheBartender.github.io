@@ -18,12 +18,6 @@ div {
 
   display: flex;
   align-items: center;
-
-  /*Purely aesthetic, controls the borders around the individual grid boxes*/
-  border: solid 0.3vw black;
-  border-radius: 0.2vw;
-  
-  font-size: 5vw;
 }
 
 .container {  display: grid;
@@ -38,6 +32,12 @@ div {
     "b1 b2 b3 b4"
     "c1 c2 c3 c4"
     "d1 d2 d3 d4";
+
+     /*Purely aesthetic, controls the borders around the individual grid boxes*/
+  border: solid 0.3vw black;
+  border-radius: 0.2vw;
+  
+  font-size: 5vw;
 }
 
 .card{
