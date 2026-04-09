@@ -54,7 +54,7 @@
 
         <section id="coolPic">
             <h2>Cool Picture I Found on Unsplash.com</h2>
-            <p><img src="./index_files/url-or-filename-goes-here"></p>
+            <p><img src="images/lark.jpg"></p>
             <p><strong>Credit:</strong> Photo by <a href="https://unsplash.com/@david_thielen?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">David Thielen</a> on <a href="https://unsplash.com/photos/a-small-bird-sitting-on-top-of-a-wooden-post-8_SCcfSLfiM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
       </p>
         </section>
