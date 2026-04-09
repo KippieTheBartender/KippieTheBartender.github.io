@@ -1,0 +1,62 @@
+
+/*Import both the Coming Soon font and Walter Turncoat font*/
+@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&family=Walter+Turncoat&display=swap');
+
+* {
+    box-sizing: border-box;
+    
+}
+
+/*Set text color to white and set font family/size/etc. Sections are changed to dark grey later down*/
+body {
+    color:white;
+    font-family: "Coming Soon", serif;
+    font-size:20px;
+    font-weight:500;
+}
+
+/*Set font family and size for headers.*/
+h1, h2 { 
+    font-size:22px;
+    text-transform:uppercase;
+    font-family: "Walter Turncoat", serif;
+}
+
+/*Make my name declaration a little bit bigger.*/
+h1 {
+    font-size:3rem;
+}
+
+header,
+section {
+    /*Set width and height of sections. This gives the regions their shape.*/
+    height: 30vh;
+    width: 40vh;
+
+    /*Set the background color. Avoid true black, it strains the eyes.*/
+    background-color: rgb(41, 41, 41);
+    float: left;
+    margin: 1rem;
+
+    /*Padding to nudge the text.*/
+    padding: 3rem;
+    padding-top: 1rem;
+
+    /*Box shadows for some visual contrast. I made them a bit bigger and more diffused.*/
+    box-shadow: 0px 10px 15px #333;
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+header h1 {
+    flex-grow: 1;
+    text-align: center;
+}
+
+/*Make sure the image fits within the frame. 70% is the farthest you can go without adjusting text padding.*/
+#coolPic img {
+    width: 70%;
+}
