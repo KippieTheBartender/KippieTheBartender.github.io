@@ -4,7 +4,7 @@ div {
   justify-content:center;
 }
 
-.container div{
+#container div{
   /*margin:auto fixes spacing issues, width/height are 1 less than region sizes to allow for a nice border look*/
   margin:auto;
   width:10vw;

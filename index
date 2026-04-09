@@ -1,1 +1,66 @@
-Hello World!
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DTC-477-ONLIN-1-LEC Thal McBrayer</title>
+    <link rel="stylesheet" href="styles.css" media="all">
+</head>
+
+<body>
+
+    <header>
+        <h1>Hello World, It’s Me, Thal McBrayer.</h1>
+    </header>
+
+    <main>
+
+        <section id="courseworkLinks">
+            <h2>Coursework Links</h2>
+            <p><a href="https://github.com/KippieTheBartender/KippieTheBartender.github.io">Github repository</a></p>
+            <p>Tiny Projects:</p>
+            <ol start="3">
+                <li>Tiny Project 4</li>
+                <li>Tiny Project 5</li>
+                <li>and so on</li>
+            </ol>
+            <p><a href="#">Major Project</a></p>
+        </section>
+
+        <section id="randomQuestion">
+            <h2>What do you think the purpose of life is?</h2>
+            <p>To do whatever makes you happy, even if that's something small. Even if you just like eating pizza!</p>
+        </section>
+
+        <section id="boringFact">
+            <h2>Really Boring Fact About Me</h2>
+            <p>I like the color blue.</p>
+        </section>
+
+        <section id="slangThatNeedsToGo">
+            <h2>Modern Slang I Wish Would Go Away</h2>
+            <p><strong>Slang:</strong> fr?</p>
+            <p><strong>Definition:</strong> It stands for "for real?", but generally means "are you serious?"</p>
+            <p><strong>Why I Don't Like It:</strong> I simply prefer to say what I mean directly. Slang acronyms get confusing sometimes.</p>
+        </section>
+
+        <section id="interestingArticle">
+            <h2>Recent Article I Liked</h2>
+            <p><strong>Article:</strong> <a href="https://dtc477.net/tp1/#url-goes-here">Title of Article</a></p>
+            <p><strong>Why I Liked It:</strong> explain your reasons</p>
+        </section>
+
+        <section id="coolPic">
+            <h2>Cool Picture I Found on Unsplash.com</h2>
+            <p><img src="./index_files/url-or-filename-goes-here"></p>
+            <p><strong>Credit:</strong> Photo by <a href="https://unsplash.com/@david_thielen?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">David Thielen</a> on <a href="https://unsplash.com/photos/a-small-bird-sitting-on-top-of-a-wooden-post-8_SCcfSLfiM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+      </p>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
