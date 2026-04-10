@@ -1,24 +1,222 @@
-.container {  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 0px 20px;
-  grid-auto-flow: row;
-  justify-content: space-around;
-  justify-items: stretch;
-  align-items: center;
-  grid-template-areas:
-    "location windDirection"
-    "condition tempHumid"
-    "forecast forecast";
-  width: 75%;
+/*font imports*/
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+/*establishing variables for control*/
+:root {
+  --predictionBoxWidth: 70vw;
+  --predictionBoxHeight: 25vh;
+
+  --temp:70;
 }
 
-.location { grid-area: location; }
+* {
+  box-sizing: border-box;
+}
 
-.windDirection { grid-area: windDirection; }
+body {
+  padding:0;
+  margin:0;
+  font-family: "DM Sans", sans-serif;
+  text-align:center;
+}
 
-.condition { grid-area: condition; }
+main {
+  position: relative;
+  width:100vw;
+  height: 100vh;
+  background-color: lightgrey;
 
-.tempHumid { grid-area: tempHumid; }
+  display:grid;
+  /*sets width of the columns*/
+  grid-template-columns: 50vw 50vw;
+  /*sets heights of the rows*/
+  grid-template-rows: 5vh 35vh 35vh var(--predictionBoxHeight);
+  grid-template-areas:
+    'geo geo'
+  'currentInfo currentInfo'
+  'currentHum  currentWind'
+  'future           future';
+}
 
-.forecast { grid-area: forecast; }
+#geo {
+  position:relative;
+  display:flex;
+  grid-area:geo;
+  border-bottom:4px solid darkorange;
+  justify-content: center;
+  align-items:center;
+
+  background-color:rgb(30, 25, 20);
+  color:white;
+  font-size: clamp(2vw, 2rem, 3vh);
+}
+
+#currentInfo {
+  position:relative;
+  grid-area: currentInfo;
+
+  background-color: black;
+  color:white;
+  font-family: "Aldrich";
+}
+
+#currentTemp {
+  position:relative;
+  display: flex;
+  top:10vh;
+  justify-content: center;
+
+  font-size: clamp(1vw, 5rem, 20vw);
+}
+
+#currentStatus {
+  position:relative;
+  display: flex;
+  justify-content: center;
+  top:45%;
+  padding:1vh;
+
+  font-size: clamp(1vw, 2rem, 8vw);
+}
+
+#currentHumidity {
+  position:relative;
+  display:flex;
+  grid-area:currentHum;
+  justify-content: center;
+  align-items:center;
+
+  background-color:whitesmoke;
+  font-size: clamp(2vw, 2rem, 10vw);
+}
+
+#currentWind {
+  position:relative;
+  display:flex;
+  grid-area:currentWind;
+  justify-content: center;
+  align-items:center;
+
+  background-color:whitesmoke;
+  font-size: clamp(2vw, 2rem, 10vw);
+}
+
+
+
+
+
+
+/*PREDICTIONS START HERE---------------------------*/
+#futureInfo{
+  display:flex;
+  position:relative;
+  grid-area:future;
+  bottom:0;
+  
+  background-color: darkorange;
+  font-family: "Aldrich";
+
+  /*Handles hiding the predictions overflow and scrolling*/
+  overflow-y:hidden;
+  overflow-x:auto;
+
+  /*handles hiding the scroll bar for some browsers*/
+  scrollbar-width:none;
+  -ms-overflow-style:none;
+}
+
+/*handles hiding the scroll bar for other browsers*/
+#futureInfo :: -webkit-scrollbar { display:none; }
+
+.futureDay {
+  position: absolute;
+  width: var(--predictionBoxWidth);
+  height: var(--predictionBoxHeight);
+  border-right: 2px solid whitesmoke;
+ 
+
+/*prevents user from highlighting prediction text while scrolling*/
+  user-select:none;
+}
+
+.futureDay:nth-child(2) {
+  left: var(--predictionBoxWidth);
+}
+
+.futureDay:nth-child(3) {
+  left: calc(var(--predictionBoxWidth) * 2);
+  border-right: none;
+}
+
+/*CONTROLS FOR INFO WITHIN FUTURE DAYS*/
+.futureTemp {
+  display: flex;
+  float:left;
+  margin-top:5vh;
+  width:50%;
+  justify-content: center;
+  
+  font-size: clamp(1vh, 3rem, 7vw);
+}
+
+.futureWind {
+  display: flex;
+  margin-top:5vh;
+  width:50%;
+  justify-content: center;
+  
+  font-size: clamp(1vh, 3rem, 7vw);
+}
+
+.futureStatus {
+  display: flex;
+  bottom:1vh;
+  justify-content: center;
+  
+  font-size: clamp(1vh, 3rem, 7vw);
+}
+
+/*CHECK FOR SCREEN ORIENTATION & SIZE*/
+
+@media screen and (orientation: landscape) {
+  
+  /*This fixes the variables for the new viewing format. Box Width specifically fixes future days section to all fit in view.*/
+  :root {
+    --predictionBoxWidth: calc(66.6vw / 3);
+    --predictionBoxHeight: calc(90vh / 3);
+  }
+  
+  /*This sets the layout to a 3x2 grid for landscape viewing*/
+  main {
+     display:grid;
+  /*sets width of the columns*/
+  grid-template-columns: calc(100vw / 3) calc(100vw / 3) calc(100vw / 3);
+  /*sets heights of the rows*/
+  grid-template-rows: 10vh calc(var(--predictionBoxHeight)*2) var(--predictionBoxHeight);
+  grid-template-areas:
+    'geo geo geo'
+  'currentInfo currentHum currentWind'
+  'currentInfo future  future';
+  }
+
+  /*These handle rearranging the future predictions divs within their individual containers*/
+  .futureTemp {
+  display: flex;
+  float:none;
+  margin-top:2vh;
+  width:100%;
+  justify-content: center;
+    
+  font-size: clamp(1vw, 3rem, 8vw);
+  }
+
+  .futureWind {
+  display: flex;
+  float:none;
+  margin-top:2vh;
+  width:100%;
+  justify-content: center;
+    
+  font-size: clamp(1vw, 3rem, 8vw);
+  }
+}
