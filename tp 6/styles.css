@@ -170,7 +170,7 @@ main {
 
 .futureStatus {
   display: flex;
-  bottom:1vh;
+  top:8vh;
   justify-content: center;
   
   font-size: clamp(1vh, 3rem, 7vw);
