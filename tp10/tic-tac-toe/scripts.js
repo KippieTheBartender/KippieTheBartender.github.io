@@ -163,7 +163,7 @@ function clickHandler() {
         // Borrowing the simple flip if/else from the "Hack The Quote" project to flip turn order.
         if (currentPlayer == "X") {currentPlayer = "O";}
 
-        else (CurrentPlayer = "X";)
+        else {CurrentPlayer = "X";}
     } 
  
   else {console.log("Invalid click");}
