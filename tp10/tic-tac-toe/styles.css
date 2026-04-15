@@ -39,7 +39,7 @@ div {
 
   color:white;
   font-size: 5vw;
-  justify-items:center;
+  justify-content:center;
 }
 
 .box:hover {
