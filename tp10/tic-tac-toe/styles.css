@@ -33,3 +33,7 @@ div {
     "b1 b2 b3"
     "c1 c2 c3";
 }
+
+.box {
+  background-color: grey;
+}
