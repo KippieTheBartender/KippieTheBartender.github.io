@@ -159,9 +159,14 @@ function clickHandler() {
         if (this.id == "c1") rowC[0] = currentTurn;
         if (this.id == "c2") rowC[1] = currentTurn;
         if (this.id == "c3") rowC[2] = currentTurn;
+
+        // Borrowing the simple flip if/else from the "Hack The Quote" project to flip turn order.
+        if (currentPlayer == "X") {currentPlayer = "O";}
+
+        else (CurrentPlayer = "X";)
     } 
  
-  else {this.style.color = "pink";}
+  else {console.log("Invalid click");}
 };
 
 
