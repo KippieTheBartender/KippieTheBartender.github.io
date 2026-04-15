@@ -103,33 +103,6 @@ function checkGameboard (rowA, rowB, rowC) {
 //THIS IS THE END OF THE CODE FROM THE FUNCTIONS/ARRAYS PROJECT
 
 
-// **********************************************
-// ***** DO NOT EDIT THE CODE BELOW THIS LINE
-// **********************************************
-
-
-// get a handle on the DOM element to be updated with the outcome
-let gameOutputMsg = document.querySelector("#gameResult");
-
-
-// call your function checkGameboard() with the 3 rows
-let winState = checkGameboard(rowA, rowB, rowC);
-
-// test the returned value of the function
-if (winState == "x") { 
-  gameOutputMsg.innerHTML = "X wins";
-  
-} else if (winState == "o") {
-  gameOutputMsg.innerHTML = "O wins";
-  
-} else if (winState == "d") {
-  gameOutputMsg.innerHTML = "draw";
-  
-} else {
-  gameOutputMsg.innerHTML = "unknown";
-}
-
-
 // ADDING CODE FOR TP 10 HERE //
 
 
@@ -146,10 +119,10 @@ function clickHandler() {
         // more debugging
         console.log("Click was valid");
 
-        this.innerHTML = currentTurn;
+        this.innerHTML = currentTurn; 
 
 
-       // update the array of rows with the player value
+       // Update the array information
         if (this.id == "a1") rowA[0] = currentTurn;
         if (this.id == "a2") rowA[1] = currentTurn;
         if (this.id == "a3") rowA[2] = currentTurn;
@@ -160,8 +133,31 @@ function clickHandler() {
         if (this.id == "c2") rowC[1] = currentTurn;
         if (this.id == "c3") rowC[2] = currentTurn;
 
-        // Borrowing the simple flip if/else from the "Hack The Quote" project to flip turn order.
+
+        // get a handle on the DOM element to be updated with the outcome
+        let gameOutputMsg = document.querySelector("#gameResult");
+
+        // call your function checkGameboard() with the 3 rows
+        let winState = checkGameboard(rowA, rowB, rowC);
+
+        // test the function value
+        if (winState == "x") {
+            gameOutputMsg.innerHTML = "X wins";
+            gameOver = true;
+
+        } else if (winState == "o") {
+            gameOutputMsg.innerHTML = "O wins";
+            gameOver = true;
+
+        } else if ( (winState == "d") && (remainingTurns == 0) ) {
+            gameOutputMsg.innerHTML = "draw";
+            gameOver = true;
+
+        }
+
+        // Simple if/else to flip turn order.
         if (currentTurn == "x") currentTurn = "o";
+
         else currentTurn = "x";
 
          currentPlayer.innerHTML = currentTurn;
