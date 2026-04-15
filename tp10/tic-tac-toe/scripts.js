@@ -1,8 +1,8 @@
 // declare the board data for a game, using 3 arrays
 // "-" indicates unmarked, "x" indicates an X mark, "o" indicates an O mark
-let rowA = [ "x", "o", "x" ];
-let rowB = [ "x", "x", "x" ];
-let rowC = [ "-", "o", "o" ];
+let rowA = [ "-", "-", "-" ];
+let rowB = [ "-", "-", "-" ];
+let rowC = [ "-", "-", "-" ];
 
 //Establishing initial variables.
 let currentTurn = "x";
@@ -109,7 +109,7 @@ function checkGameboard (rowA, rowB, rowC) {
 
 
 // get a handle on the DOM element to be updated with the outcome
-let gameOutputMsg = document.querySelector("#gameResult span");
+let gameOutputMsg = document.querySelector("#gameResult");
 
 
 // call your function checkGameboard() with the 3 rows
