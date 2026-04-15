@@ -36,10 +36,12 @@ div {
 
 .box {
   background-color: grey;
+
   color:white;
   font-size: 5vw;
+  justify-items:center;
 }
 
 .box:hover {
-    background-color: greenyellow;
+    background-color: rgb(175, 219, 109);
 }
