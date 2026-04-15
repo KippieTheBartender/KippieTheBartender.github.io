@@ -161,9 +161,9 @@ function clickHandler() {
         if (this.id == "c3") rowC[2] = currentTurn;
 
         // Borrowing the simple flip if/else from the "Hack The Quote" project to flip turn order.
-        if (currentPlayer == "X") {currentPlayer = "O";}
+        if (currentPlayer == "x") {currentPlayer = "o";}
 
-        else {CurrentPlayer = "X";}
+        else {CurrentPlayer = "x";}
     } 
  
   else {console.log("Invalid click");}
