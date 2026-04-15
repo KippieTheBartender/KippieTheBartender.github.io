@@ -2,6 +2,11 @@
 let gen = document.getElementById("container div");
 let Player = 1;
 
+let currentTurn = "x";
+let gameOver = false;
+
+let clickbox = document.getElementById("box");
+
 gen.onclick = function() {addMark()};
 
 //And this is the function for marking the spaces and changing the turn count.
@@ -140,10 +145,7 @@ if (winState == "x") {
 
 
 // ADDING CODE FOR TP 10 HERE //
-let currentTurn = "x";
-let gameOver = false;
 
-let clickbox = document.getElementById("box");
 
 gen.onclick = function() {clickHandler()};
 
@@ -152,7 +154,20 @@ function clickHandler() {
   // make sure it's a valid (empty) space
   if ((this.innerHTML == "") && (!gameOver))
 
-    {this.innerHTML = currentTurn;} 
+    {this.innerHTML = currentTurn;
+
+
+       // update the array of rows with the player value
+        if (this.id == "a1") rowA[0] = currentTurn;
+        if (this.id == "a2") rowA[1] = currentTurn;
+        if (this.id == "a3") rowA[2] = currentTurn;
+        if (this.id == "b1") rowB[0] = currentTurn;
+        if (this.id == "b2") rowB[1] = currentTurn;
+        if (this.id == "b3") rowB[2] = currentTurn;
+        if (this.id == "c1") rowC[0] = currentTurn;
+        if (this.id == "c2") rowC[1] = currentTurn;
+        if (this.id == "c3") rowC[2] = currentTurn;
+    } 
  
   else {this.style.color = "pink";}
 };
