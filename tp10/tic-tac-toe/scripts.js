@@ -8,6 +8,7 @@ let rowC = [ "-", "-", "-" ];
 let currentTurn = "x";
 let gameOver = false;
 let currentPlayer;
+let remainingTurns = 9;
 
 //THIS IS THE START OF THE CODE FROM THE FUNCTIONS/ARRAYS PROJECT
 
@@ -119,7 +120,8 @@ function clickHandler() {
         // more debugging
         console.log("Click was valid");
 
-        this.innerHTML = currentTurn; 
+        this.innerHTML = currentTurn;
+        remainingTurns = remainingTurns-1; 
 
 
        // Update the array information
