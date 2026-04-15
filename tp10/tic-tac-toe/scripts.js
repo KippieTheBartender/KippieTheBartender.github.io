@@ -1,21 +1,3 @@
-//Establishing initial variables.
-let gen = document.getElementById("container div");
-let Player = 1;
-
-let currentTurn = "x";
-let gameOver = false;
-
-let clickbox = document.getElementById("box");
-
-gen.onclick = function() {addMark()};
-
-//And this is the function for marking the spaces and changing the turn count.
-function addMark(Player) {
-  if (Player == 1) {gen.style.color = "pink"; Player = 2;} 
- 
-  else {gen.style.color = "white"; Player = 1;}
-};
-
 // declare the board data for a game, using 3 arrays
 // "-" indicates unmarked, "x" indicates an X mark, "o" indicates an O mark
 let rowA = [ "x", "o", "x" ];
@@ -145,6 +127,11 @@ if (winState == "x") {
 
 
 // ADDING CODE FOR TP 10 HERE //
+//Establishing initial variables.
+let currentTurn = "x";
+let gameOver = false;
+let currentPlayer;
+
 
 function clickHandler() {
 
