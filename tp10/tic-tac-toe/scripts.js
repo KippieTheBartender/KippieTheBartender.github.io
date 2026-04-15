@@ -4,6 +4,10 @@ let rowA = [ "x", "o", "x" ];
 let rowB = [ "x", "x", "x" ];
 let rowC = [ "-", "o", "o" ];
 
+//Establishing initial variables.
+let currentTurn = "x";
+let gameOver = false;
+let currentPlayer;
 
 //THIS IS THE START OF THE CODE FROM THE FUNCTIONS/ARRAYS PROJECT
 
@@ -127,10 +131,7 @@ if (winState == "x") {
 
 
 // ADDING CODE FOR TP 10 HERE //
-//Establishing initial variables.
-let currentTurn = "x";
-let gameOver = false;
-let currentPlayer;
+
 
 
 function clickHandler() {
