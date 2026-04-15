@@ -139,3 +139,13 @@ if (winState == "x") {
 }
 
 
+// ADDING CODE FOR TP 10 HERE //
+let clickbox = document.getElementById("box");
+
+gen.onclick = function() {clickHandler()};
+
+function clickHandler() {
+  if (clickbox.style.color == "black") {clickbox.style.color = "pink";} 
+ 
+  else {clickbox.style.color = "black";}
+};
