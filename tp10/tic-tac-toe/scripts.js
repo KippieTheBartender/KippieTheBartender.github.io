@@ -171,3 +171,21 @@ function clickHandler() {
  
   else {this.style.color = "pink";}
 };
+
+
+// wait for the document to load before adding clickable events
+document.addEventListener("DOMContentLoaded", function () {
+
+    // find all the clickable spaces
+    let allSpaces = document.querySelectorAll(".box");
+
+    // loop with "for-of" through all the clickable spaces
+    for (let eachSpace of allSpaces) {
+        eachSpace.addEventListener("click", clickSquare);
+    }
+
+    // update current player DOM element with first player
+    currentPlayer = document.querySelector("#currentPlayer span");
+    currentPlayer.innerHTML = currentTurn;
+
+});
