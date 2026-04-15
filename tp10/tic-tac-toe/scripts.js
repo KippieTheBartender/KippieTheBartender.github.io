@@ -140,12 +140,19 @@ if (winState == "x") {
 
 
 // ADDING CODE FOR TP 10 HERE //
+let currentTurn = "x";
+let gameOver = false;
+
 let clickbox = document.getElementById("box");
 
 gen.onclick = function() {clickHandler()};
 
 function clickHandler() {
-  if (clickbox.style.color == "black") {clickbox.style.color = "pink";} 
+
+  // make sure it's a valid (empty) space
+  if ((this.innerHTML == "") && (!gameOver))
+
+    {this.innerHTML = currentTurn;} 
  
-  else {clickbox.style.color = "black";}
+  else {this.style.color = "pink";}
 };
