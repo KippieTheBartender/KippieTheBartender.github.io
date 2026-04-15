@@ -1,7 +1,9 @@
+
 div {
   /*Used div controls here to bulk handle centering and vertical spacing*/
-  margin-top:15vh;
   justify-content:center;
+  margin:auto;
+  text-align: center;
 }
 
 .container div{
@@ -39,7 +41,6 @@ div {
 
   color:white;
   font-size: 5vw;
-  justify-content:center;
 }
 
 .box:hover {

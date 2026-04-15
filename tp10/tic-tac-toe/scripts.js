@@ -104,9 +104,13 @@ function checkGameboard (rowA, rowB, rowC) {
 //THIS IS THE END OF THE CODE FROM THE FUNCTIONS/ARRAYS PROJECT
 
 
+
+
+
+
 // ADDING CODE FOR TP 10 HERE //
 
-
+// The additional variables have been added to the start of this scripts document for the sake of load order.
 
 function clickHandler() {
 
@@ -120,7 +124,9 @@ function clickHandler() {
         // more debugging
         console.log("Click was valid");
 
+        //change the contents of the square that was clicked
         this.innerHTML = currentTurn;
+        //Tick the remaining turns down. This is for detecting a draw
         remainingTurns = remainingTurns-1; 
 
 
@@ -142,6 +148,7 @@ function clickHandler() {
         // call your function checkGameboard() with the 3 rows
         let winState = checkGameboard(rowA, rowB, rowC);
 
+
         // test the function value
         if (winState == "x") {
             gameOutputMsg.innerHTML = "X wins";
@@ -157,22 +164,27 @@ function clickHandler() {
 
         }
 
-        // Simple if/else to flip turn order.
+        // simple if/else to flip turn order
         if (currentTurn == "x") currentTurn = "o";
 
         else currentTurn = "x";
 
-         currentPlayer.innerHTML = currentTurn;
+        // update the currentPlayer element now that the turn has flipped
+        currentPlayer.innerHTML = currentTurn;
     } 
  
+    // just some extra debugging
   else {console.log("Invalid click");}
 };
 
 
+// THIS IS DIRECTLY BORROWED FROM THE EXAMPLE
+// I just couldn't think of a better way to do it
+
 // wait for the document to load before adding clickable events
 document.addEventListener("DOMContentLoaded", function () {
 
-    // find all the clickable spaces
+    // find all the spaces.
     let allSpaces = document.querySelectorAll(".box");
 
     // loop with "for-of" through all the clickable spaces
