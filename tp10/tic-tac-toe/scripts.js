@@ -146,15 +146,19 @@ if (winState == "x") {
 
 // ADDING CODE FOR TP 10 HERE //
 
-
-gen.onclick = function() {clickHandler()};
-
 function clickHandler() {
 
-  // make sure it's a valid (empty) space
-  if ((this.innerHTML == "") && (!gameOver))
+  // Some code for debugging
+  console.log("Someone clicked");
+  console.log(currentPlayer);
 
-    {this.innerHTML = currentTurn;
+  // make sure it's a valid (empty) space
+  if ((this.innerHTML == "") && (!gameOver)) {
+    
+        // more debugging
+        console.log("Click was valid");
+
+        this.innerHTML = currentTurn;
 
 
        // update the array of rows with the player value
