@@ -181,7 +181,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // loop with "for-of" through all the clickable spaces
     for (let eachSpace of allSpaces) {
-        eachSpace.addEventListener("click", clickSquare);
+        eachSpace.addEventListener("click", clickHandler);
     }
 
     // update current player DOM element with first player
